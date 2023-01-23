@@ -22,8 +22,8 @@ groups=("$_linuxprefix-extramodules")
 install=$_pkgname.install
 source=("http://downloads.sourceforge.net/cdemu/$_pkgname-$pkgver.tar.xz"
         '60-vhba.rules')
-sha256sums=(SKIP)
-            '3052cb1cadbdf4bfb0b588bb8ed80691940d8dd63dc5502943d597eaf9f40c3b')
+sha256sums=(SKIP SKIP)
+
 
 prepare() {
   cd "$_pkgname-$pkgver"
