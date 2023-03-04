@@ -1,16 +1,16 @@
 # Maintainer: Bernhard Landauer <bernhard@manjaro.org>
 # Maintainer: Philip Müller <philm[at]manjaro[dot]org>
-# Arch credits:
+# Archlinux credits:
 # Ray Rashif <schiv@archlinux.org>
 # Mateusz Herych <heniekk@gmail.com>
 # Charles Lindsay <charles@chaoslizard.org>
 
 _linuxprefix=linux-xanmod-lts
-_extramodules=$(find /usr/lib/modules -type d -iname 5.15.95*xanmod* | rev | cut -d "/" -f1 | rev)
+_extramodules=$(find /usr/lib/modules -type d -iname 6.1.15*xanmod* | rev | cut -d "/" -f1 | rev)
 pkgname=$_linuxprefix-vhba-module
 _pkgname=vhba-module
 pkgver=20211218
-pkgrel=515951
+pkgrel=61151
 pkgdesc="Kernel module that emulates SCSI devices"
 arch=('x86_64')
 url="http://cdemu.sourceforge.net/"
@@ -30,7 +30,7 @@ prepare() {
 }
 
 build() {
-  _kernver=$(find /usr/lib/modules -type d -iname 5.15.95*xanmod* | rev | cut -d "/" -f1 | rev)
+  _kernver=$(find /usr/lib/modules -type d -iname 6.1.15*xanmod* | rev | cut -d "/" -f1 | rev)
 
   cd "$_pkgname-$pkgver"
   make -j1 KDIR=/usr/lib/modules/${_kernver}/build
