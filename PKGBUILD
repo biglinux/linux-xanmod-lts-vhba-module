@@ -1,17 +1,16 @@
 # Maintainer: Philip Müller <philm[at]manjaro[dot]org>
 # Maintainer: Bernhard Landauer <bernhard@manjaro.org>
-
-# Arch credits:
-# Ray Rashif <schiv@archlinux.org>
-# Mateusz Herych <heniekk@gmail.com>
-# Charles Lindsay <charles@chaoslizard.org>
+# Contributor: Jan Alexander Steffens (heftig) <heftig@archlinux.org>
+# Contributor: Ray Rashif <schiv@archlinux.org>
+# Contributor: Mateusz Herych <heniekk@gmail.com>
+# Contributor: Charles Lindsay <charles@chaoslizard.org>
 
 _linuxprefix=linux-xanmod-lts
 
 _module=vhba-module
 pkgname="${_linuxprefix}-${_module}"
-pkgver=20211218
-pkgrel=66271
+pkgver=20240202
+pkgrel=66281
 pkgdesc="Kernel module that emulates SCSI devices"
 arch=('x86_64')
 url="https://cdemu.sourceforge.io/"
@@ -21,7 +20,7 @@ makedepends=("${_linuxprefix}-headers")
 provides=("${_module}=$pkgver" "VHBA-MODULE")
 groups=("${_linuxprefix}-extramodules")
 source=("http://downloads.sourceforge.net/cdemu/${_module}-$pkgver.tar.xz")
-sha256sums=('72c5a8c1c452805e4cef8cafefcecc2d25ce197ae4c67383082802e5adcd77b6')
+sha256sums=('bf5850d4b8f50221ca87d7343a929eda87b191f6f5ae8c614174543b5badde83')
 
 build() {
   _kernver="$(cat /usr/src/${_linuxprefix}/version)"
